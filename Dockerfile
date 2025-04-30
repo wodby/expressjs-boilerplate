@@ -1,0 +1,9 @@
+ARG WODBY_BASE_IMAGE
+FROM ${WODBY_BASE_IMAGE}
+
+ARG COPY_FROM
+ARG COPY_TO
+
+CMD ["npm", "start"]
+
+COPY --chown=node:node ${COPY_FROM} ${COPY_TO}
