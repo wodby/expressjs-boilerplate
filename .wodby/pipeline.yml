@@ -22,6 +22,6 @@ jobs:
           key: 'npm-{{ hash "package-lock.json" }}-v1'
           path: node_modules
 
-      - run: wodby ci build node
+      - run: wodby ci build node -f Dockerfile
       - run: wodby ci release
       - run: wodby ci deploy
